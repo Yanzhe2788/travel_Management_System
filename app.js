@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButton = document.getElementById("apply-filters");
     const saveMessage = document.getElementById("save-message");
     const saveButton = document.getElementById("save-selection");
-    const correctPassword = "kaysze"; //correct password for admin panel access
+    const correctPassword = "admin123"; //correct password for admin panel access
     
     let hotels = [];
     let flights = [];

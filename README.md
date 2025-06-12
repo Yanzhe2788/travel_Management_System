@@ -1,6 +1,6 @@
 # ✈️ Trip Management System
 
-A simple web-based trip planning and management system that allows users to select flights and hotels for various destinations, estimate budgets, and save their selections. An admin panel is also available to view and manage user submissions.
+A simple web-based trip planning and management system that allows users to select flights and hotels for various destinations, estimate budgets, and save their selections. An admin panel that need password to log-in is also available to view and manage user submissions.
 
 ---
 
@@ -32,6 +32,7 @@ A simple web-based trip planning and management system that allows users to sele
 - Save your trip to the database
 
 ### 🛠 Admin Side (admin.php)
+- Basic secure with a password log-in page
 - View up to 40 most recent trip selections
 - Display includes:
   - Username
@@ -73,7 +74,7 @@ CREATE TABLE user_selection (
 
 6. localhost/travel_Management_System/index.php for user page
 
-7. localhost/travel_Management_System/admin.php for admin panel
+7. localhost/travel_Management_System/admin.php for admin panel (password is "admin123")
 
 8. Make sure to enable JavaScript and allow pop-ups for best results
 
