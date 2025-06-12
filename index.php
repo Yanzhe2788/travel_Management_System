@@ -120,17 +120,37 @@
 </div>
 
     <!--Button of Admin Panel to link with admin.php-->
-    <button onclick="window.location.href='admin.php'">Admin Panel</button>
+    <button id="admin-panel-button">Admin Panel</button>
+
+    <!--Password Button-->
+    <div id="admin-password-modal" class="modal"
+    style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; 
+    bckground-color: rgba(0,0,0,0.5);">
+        <div class="modal-content" style="background:#fff; margin:15% auto; padding:20px; 
+        borfer-radius:10px; width:300px; text-align:center; position:relative;">
+            <span id="close-admin-modal" style="position:absolute;
+            top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+            <h3>Admin Access</h3>
+            <input type="password" id="admin-password-input" placeholder="Enter password"
+            style="padding:10px; width:90%; margin:10px 0;"><br>
+            <button id="submit-admin-password" style="padding:8px 16px;
+            background:#28a745; color:white; border:none; border-radius:5px; 
+            cursor:pointer;">Submit</button>
+            <p id="admin-error-message" style="color:red;
+            display:none; margin-top:10px;">Incorrect Password! Try again.</p>
+        </div>
+    </div>
+
+
 <!--Contact Us-->
+
 <div class="ContactUs" style="display: flex; justify-content: center; margin: 20px;">
     <div class="ContactUsMenu" style="text-align: center;">
         <h1 class="ContactUsTitle">Contact Info</h1>
         <ul class="fList" style="list-style: none; padding: 0;">
             <li class="fListItem">📞 123-456-7890</li>
-            <li class="fListItem">
-                📧 <a href="mailto:HELLO@TRAVELMGMTSYS.COM">HELLO@TRAVELMGMTSYS.COM</a>
-            </li>
-            <li class="fListItem">📍 123 Anywhere St., Any City</li>
+            <li class="fListItem">📧 HELLO@TRAVELMGMTSYS.COM</a></li>
+            <li class="fListItem">📍 123 Anywhere St. Any City</li>
         </ul>
         <button onclick="window.location.href='mailto:HELLO@TRAVELMGMTSYS.COM'" 
                 style="margin-top: 10px; padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
