@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButton = document.getElementById("apply-filters");
     const saveMessage = document.getElementById("save-message");
     const saveButton = document.getElementById("save-selection");
+    const correctPassword = "kaysze"; //correct password for admin panel access
     
     let hotels = [];
     let flights = [];
@@ -151,6 +152,39 @@ document.addEventListener("DOMContentLoaded", function () {
         compareHotelsContainer.appendChild(hotelCard);
     }
 }
+
+    //Submit button
+    document.getElementById("submit-admin-password").addEventListener("click",function(){
+        const input = document.getElementById("admin-password-input").value;
+        const errorMsg = document.getElementById("admin-error-message");
+
+        if (input === correctPassword) { //check if password correct or not
+            window.location.href = "admin.php";
+        } else {
+            errorMsg.style.display = "block";
+        }
+    });
+
+    //to close the password page
+    document.getElementById("close-admin-modal").addEventListener("click",function(){
+        document.getElementById("admin-password-modal").style.display = "none";
+        document.getElementById("admin-password-input").value = "";
+        document.getElementById("admin-error-message").style.display= "none";
+    });
+
+    //open the password page
+    document.getElementById("admin-password-modal").addEventListener("click",function(event) {
+        if (event.target.id === "admin-password-modal") {
+            document.getElementById("admin-password-modal").style.display = "none";
+            document.getElementById("admin-password-input").value = "";
+            document.getElementById("admin-error-message").style.display = "none";
+        }
+    });
+
+    document.getElementById("admin-panel-button").addEventListener("click", function() {
+        document.getElementById("admin-password-modal").style.display = "block";
+    });
+
     //function to update the calculation of budget after choose flight and hotel
     function updateBudget() {
         if (selectedFlight && selectedHotel) {
