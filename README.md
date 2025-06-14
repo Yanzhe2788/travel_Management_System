@@ -12,6 +12,7 @@ A simple web-based trip planning and management system that allows users to sele
 * admin.php # Admin dashboard – displays saved user data
 * admin.css # Styling for admin panel
 * trip_db.sql # Database schema (if applicable)
+* Travel Mgmt System.pptx # Slide Show for this project
 * README.md # This file
 
 
